@@ -1,0 +1,32 @@
+#include "ClapTrap.hpp"
+
+ClapTrap::ClapTrap() { }
+
+ClapTrap::ClapTrap(std::string name)
+{
+	this->name = name;
+	this->attackDamage = 0;
+	this->energyPoints = 10;
+	this->hitPoints = 10;
+}
+
+void ClapTrap::attack(std::string const & target)
+{
+	std::cout << name << " attack " << target << ", "
+		<< "causing " << attackDamage << " points of damage!" << std::endl;
+	hitPoints += attackDamage;
+}
+
+void ClapTrap::takeDamage(unsigned int amount)
+{
+	std::cout << name << " take damage " << amount << std::endl;
+	this->energyPoints -= amount;
+}
+
+void ClapTrap::beRepaired(unsigned int amount)
+{
+	std::cout << name << " be repaired " << amount << std::endl;
+	this->energyPoints += amount;
+}
+
+ClapTrap::~ClapTrap() { }
