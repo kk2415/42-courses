@@ -42,11 +42,9 @@ static void	make_export_string(t_env *cur, char **str)
 
 void	print_export(t_info *info, int *fd)
 {
-	int		i;
 	t_env	*cur;
 	char	**str;
 
-	i = 0;
 	cur = info->env_deq->head;
 	str = (char **)malloc(sizeof(char *) * (info->env_deq->size + 1));
 	merror(str);
