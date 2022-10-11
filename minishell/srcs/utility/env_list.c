@@ -24,7 +24,7 @@ t_env	*create_env_node(void)
 
 void	link_env_node(t_env *front, t_env *back)
 {
-	if (front == NULL & back == NULL)
+	if ((front == NULL) & (back == NULL))
 		return ;
 	if (front != NULL)
 		front->next = back;

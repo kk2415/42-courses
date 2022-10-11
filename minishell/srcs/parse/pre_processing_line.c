@@ -15,7 +15,6 @@
 static char	*remove_space(char *line, int start_idx)
 {
 	int		i;
-	int		space_len;
 	char	*front;
 	char	*back;
 	char	*new;
@@ -25,7 +24,6 @@ static char	*remove_space(char *line, int start_idx)
 	i = start_idx;
 	while (check_type(line[i]) == SPCE)
 		i++;
-	space_len = i - start_idx;
 	front = (char *)malloc(sizeof(char) * (start_idx + 1));
 	merror(front);
 	ft_strlcpy(front, line, start_idx + 1);

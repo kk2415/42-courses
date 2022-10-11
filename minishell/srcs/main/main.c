@@ -28,12 +28,10 @@ static void	add_slash_at_end_of_path(t_info *info, char **environment_path)
 
 void	set_environment_path(t_info *info)
 {
-	int		idx;
 	int		path_size;
 	char	*path_value;
 	char	**env_path;
 
-	idx = 0;
 	path_value = get_env_value("PATH", info);
 	if (path_value == NULL)
 		return ;
