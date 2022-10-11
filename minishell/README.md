@@ -25,7 +25,7 @@ if you can't find readline library
 <br/>
 
 ### 2. make
-excute `make` command in shell
+execute `make` command in shell
 
 <br/>
 
